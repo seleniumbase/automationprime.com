@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>SeleniumBase — Automate the Web</title>
+
+  <meta
+    name="description"
+    content="Interactive examples of Python browser automation with SeleniumBase."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <a href="#" class="logo">
+      <span class="logo-mark">SB</span>
+      <span class="title" style="font-size: 14px;">SELENIUMBASE</span>
+    </a>
+
+    <nav>
+      <a href="#universe">Explore</a>
+      <a href="#missions">Examples</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a
+      class="github-link"
+      href="https://github.com/seleniumbase/SeleniumBase"
+      target="_blank"
+      rel="noopener"
+    >
+      GitHub ↗
+    </a>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">
+          PYTHON · BROWSER · AUTOMATION
+        </p>
+
+        <h1>
+          <span>AUTOMATE</span>
+          <span class="outline">THE WEB.</span>
+        </h1>
+
+        <p class="hero-description">
+          Explore practical SeleniumBase automation examples
+          through an interactive developer experience.
+        </p>
+
+        <a href="#universe" class="hero-button">
+          Enter the automation lab
+          <span>↓</span>
+        </a>
+      </div>
+
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        SYSTEM READY
+      </div>
+
+      <div class="hero-scroll">
+        SCROLL TO EXPLORE
+        <span>↓</span>
+      </div>
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="intro section">
+
+      <div class="section-number">01</div>
+
+      <div class="intro-content">
+        <p class="eyebrow">THE IDEA</p>
+
+        <h2>
+          Python code
+          <span>becomes action.</span>
+        </h2>
+
+        <p>
+          SeleniumBase turns ordinary Python into browser
+          automation. This site lets you explore some of
+          those examples visually.
+        </p>
+      </div>
+
+      <div class="terminal">
+
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">login.py</span>
+        </div>
+
+        <pre><code><span class="line-number">01</span> <span class="purple">from</span> seleniumbase <span class="purple">import</span> sb_cdp
+<span class="line-number">02</span>
+<span class="line-number">03</span> <span>sb</span> = <span>sb_cdp.Chrome()</span>:
+<span class="line-number">04</span> sb.goto(<span class="green_text">"seleniumbase.io/simple/login"</span>)
+<span class="line-number">05</span> sb.type(<span class="green_text">"#username"</span>, <span class="green_text">"demo_user"</span>)
+<span class="line-number">06</span> sb.type(<span class="green_text">"#password"</span>, <span class="green_text">"secret_pass"</span>)
+<span class="line-number">07</span> sb.click(<span class="green_text">'a:contains("Sign in")'</span>)
+<span class="line-number">08</span> sb.assert_text(<span class="green_text">"Welcome!"</span>)</code></pre>
+
+      </div>
+
+    </section>
+
+
+    <!-- UNIVERSE -->
+    <section id="universe" class="universe-section">
+
+      <div class="universe-header">
+        <div>
+          <p class="eyebrow">02 / EXPLORE</p>
+          <h2>THE AUTOMATION<br /><span>UNIVERSE.</span></h2>
+        </div>
+
+        <p>
+          Drag the universe.<br />
+          Discover a mission.
+        </p>
+      </div>
+
+      <div class="universe" id="universe">
+
+        <div class="universe-grid"></div>
+
+        <svg class="connections" id="connections">
+          <line id="line-1" />
+          <line id="line-2" />
+          <line id="line-3" />
+          <line id="line-4" />
+        </svg>
+
+        <div class="universe-world" id="world">
+
+          <button
+            class="node node-main"
+            data-category="browser"
+            style="left: 50%; top: 50%;"
+          >
+            <span class="node-pulse"></span>
+            <span class="node-label">BROWSER</span>
+            <small>automation core</small>
+          </button>
+
+          <button
+            class="node"
+            data-category="testing"
+            style="left: 23%; top: 31%;"
+          >
+            <span class="node-icon">01</span>
+            <span class="node-label">TESTING</span>
+            <small>assertions · suites</small>
+          </button>
+
+          <button
+            class="node"
+            data-category="scraping"
+            style="left: 75%; top: 27%;"
+          >
+            <span class="node-icon">02</span>
+            <span class="node-label">SCRAPING</span>
+            <small>extract · inspect</small>
+          </button>
+
+          <button
+            class="node"
+            data-category="interaction"
+            style="left: 24%; top: 73%;"
+          >
+            <span class="node-icon">03</span>
+            <span class="node-label">INTERACTION</span>
+            <small>click · type · drag</small>
+          </button>
+
+          <button
+            class="node"
+            data-category="cdp"
+            style="left: 76%; top: 72%;"
+          >
+            <span class="node-icon">04</span>
+            <span class="node-label">CAPTCHAS</span>
+            <small>sb.solve_captcha()</small>
+          </button>
+
+        </div>
+
+        <div class="drag-hint">
+          <span>✦</span>
+          DRAG TO EXPLORE
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MISSIONS -->
+    <section id="missions" class="missions section">
+
+      <div class="section-number">03</div>
+
+      <div class="missions-header">
+        <div>
+          <p class="eyebrow">MISSIONS</p>
+          <h2>
+            REAL PYTHON.<br />
+            <span>REAL AUTOMATION.</span>
+          </h2>
+        </div>
+
+        <p class="missions-description">
+          A small selection of examples based on the
+          SeleniumBase project.
+        </p>
+      </div>
+
+
+      <div class="mission-grid">
+
+        <article
+          class="mission-card"
+          data-example="login"
+        >
+          <div class="mission-top">
+            <span>MISSION 001</span>
+            <span>BEGINNER</span>
+          </div>
+
+          <div class="mission-icon">↪</div>
+
+          <h3>Automated Login</h3>
+
+          <p>
+            Navigate to a page, enter credentials,
+            click a button, and verify the result.
+          </p>
+
+          <div class="mission-code">
+            <code>sb.goto()</code>
+            <code>sb.type()</code>
+            <code>sb.click()</code>
+            <code>sb.assert_text()</code>
+          </div>
+
+          <button class="mission-open">
+            VIEW MISSION →
+          </button>
+        </article>
+
+
+        <article
+          class="mission-card"
+          data-example="scraping"
+        >
+          <div class="mission-top">
+            <span>MISSION 002</span>
+            <span>INTERMEDIATE</span>
+          </div>
+
+          <div class="mission-icon">⌁</div>
+
+          <h3>Web Scraping</h3>
+
+          <p>
+            Use browser automation to navigate,
+            inspect content, and extract information.
+          </p>
+
+          <div class="mission-code">
+            <code>sb.goto()</code>
+            <code>sb.get_text()</code>
+            <code>sb.get_attribute()</code>
+            <code>sb.get_html()</code>
+          </div>
+
+          <button class="mission-open">
+            VIEW MISSION →
+          </button>
+        </article>
+
+
+        <article
+          class="mission-card"
+          data-example="interaction"
+        >
+          <div class="mission-top">
+            <span>MISSION 003</span>
+            <span>INTERMEDIATE</span>
+          </div>
+
+          <div class="mission-icon">✦</div>
+
+          <h3>Browser Interaction</h3>
+
+          <p>
+            Automate forms, menus, uploads,
+            drag-and-drop, and complex UI interactions.
+          </p>
+
+          <div class="mission-code">
+            <code>sb.click()</code>
+            <code>sb.type()</code>
+            <code>sb.drag_and_drop()</code>
+            <code>sb.select_option_by_text()</code>
+          </div>
+
+          <button class="mission-open">
+            VIEW MISSION →
+          </button>
+        </article>
+
+
+        <article
+          class="mission-card"
+          data-example="cdp"
+        >
+          <div class="mission-top">
+            <span>MISSION 004</span>
+            <span>INTERMEDIATE</span>
+          </div>
+
+          <div class="mission-icon">⌘</div>
+
+          <h3>CAPTCHA-bypass</h3>
+
+          <p>
+            Go beyond traditional automation with
+            SeleniumBase CDP Mode's CAPTCHA-bypass abilities.
+          </p>
+
+          <div class="mission-code">
+            <code>sb = sb_cdp.Chrome()</code>
+            <code>sb.solve_captcha()</code>
+            <code>cdp.click()</code>
+            <code>cdp.type()</code>
+          </div>
+
+          <button class="mission-open">
+            VIEW MISSION →
+          </button>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- LIVE DEMO -->
+    <section class="demo section">
+
+      <div class="section-number">04</div>
+
+      <div class="demo-header">
+        <p class="eyebrow">AUTOMATION REPLAY</p>
+
+        <h2>
+          WATCH
+          <span>THE ACTION.</span>
+        </h2>
+      </div>
+
+      <div class="demo-layout">
+
+        <!-- Browser -->
+        <div class="browser-window">
+
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="address">
+              seleniumbase.io/simple/login
+            </div>
+
+            <div class="browser-status">
+              ●
+            </div>
+          </div>
+
+          <div class="browser-page">
+
+            <div class="demo-login">
+
+              <div class="demo-logo">
+                SELENIUMBASE
+              </div>
+
+              <h3>Simple Login</h3>
+
+              <label>
+                Username
+                <input
+                  id="demo-username"
+                  type="text"
+                  readonly
+                />
+              </label>
+
+              <label>
+                Password
+                <input
+                  id="demo-password"
+                  type="password"
+                  readonly
+                />
+              </label>
+
+              <button id="demo-login-button">
+                Sign in
+              </button>
+
+              <div
+                id="demo-success"
+                class="demo-success"
+              >
+                ✓ Welcome!
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Code -->
+        <div class="demo-code">
+
+          <div class="code-header">
+            <span>automation.py</span>
+            <span id="execution-status">
+              READY
+            </span>
+          </div>
+
+          <div class="code-lines">
+
+            <div class="code-line" data-step="-1">
+              <span>00</span>
+              <code style="opacity: .8;">
+                <b>from</b> seleniumbase <b>import</b> sb_cdp
+              </code>
+            </div>
+
+            <div class="code-line active" data-step="0">
+              <span>01</span>
+              <code>
+                sb = sb_cdp.Chrome()
+              </code>
+            </div>
+
+            <div class="code-line" data-step="1">
+              <span>02</span>
+              <code>
+                sb.goto(<i>"seleniumbase.io/simple/login"</i>)
+              </code>
+            </div>
+
+            <div class="code-line" data-step="2">
+              <span>03</span>
+              <code>
+                sb.type(<i>"#username"</i>, <i>"demo_user"</i>)
+              </code>
+            </div>
+
+            <div class="code-line" data-step="3">
+              <span>04</span>
+              <code>
+                sb.type(<i>"#password"</i>, <i>"secret_pass"</i>)
+              </code>
+            </div>
+
+            <div class="code-line" data-step="4">
+              <span>05</span>
+              <code>
+                sb.click(<i>'a:contains("Sign in")'</i>)
+              </code>
+            </div>
+
+            <div class="code-line" data-step="5">
+              <span>06</span>
+              <code>
+                sb.assert_text(<i>"Welcome!"</i>)
+              </code>
+            </div>
+
+          </div>
+
+          <button
+            class="run-button"
+            id="run-demo"
+          >
+            ▶ RUN AUTOMATION
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about section">
+
+      <div class="section-number">05</div>
+
+      <div class="about-content">
+
+        <p class="eyebrow">SELENIUMBASE</p>
+
+        <h2>
+          Automation
+          <span>made simple.</span>
+        </h2>
+
+        <p>
+          SeleniumBase provides a Python framework for
+          browser automation, testing, scraping, and
+          advanced browser control.
+        </p>
+
+        <div class="about-actions">
+
+          <a
+            class="primary-button"
+            href="https://github.com/seleniumbase/SeleniumBase"
+            target="_blank"
+            rel="noopener"
+          >
+            VIEW ON GITHUB ↗
+          </a>
+
+          <a
+            class="secondary-button"
+            href="https://seleniumbase.io/"
+            target="_blank"
+            rel="noopener"
+          >
+            DOCUMENTATION ↗
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="about-mark">
+        <span>SB</span>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div>
+      SELENIUMBASE
+    </div>
+
+    <div>
+      PYTHON · AUTOMATION · TESTING
+    </div>
+
+    <a
+      href="https://github.com/seleniumbase/SeleniumBase"
+      target="_blank"
+      rel="noopener"
+    >
+      GitHub ↗
+    </a>
+
+  </footer>
+
+
+  <!-- Mission Modal -->
+  <div
+    class="modal"
+    id="mission-modal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-inner">
+
+      <button
+        class="modal-close"
+        id="modal-close"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <p class="eyebrow" id="modal-category">
+        <!-- MISSION -->
+      </p>
+
+      <h2 id="modal-title">
+        Automated Login
+      </h2>
+
+      <p id="modal-description">
+        ...
+      </p>
+
+      <pre class="modal-code"><code id="modal-code"></code></pre>
+
+      <a
+        id="modal-source"
+        class="primary-button"
+        href="https://github.com/seleniumbase/SeleniumBase"
+        target="_blank"
+        rel="noopener"
+      >
+        VIEW SOURCE ↗
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
